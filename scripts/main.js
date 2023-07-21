@@ -23,6 +23,7 @@ Vue.createApp({
                 },
 
             ]
+            
 
         }
 
@@ -30,9 +31,8 @@ Vue.createApp({
 
     methods: {
 
-    }
+    },
 
 }).mount("#app");
 
-console.log(this.todoData)
 
