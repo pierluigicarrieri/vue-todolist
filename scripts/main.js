@@ -4,6 +4,26 @@ Vue.createApp({
         
         return {
 
+            todoData: [
+
+                {
+                    id: 1,
+                    text: "Buy groceries",
+                    done: false,
+                },
+                {
+                    id: 2,
+                    text: "Make bed",
+                    done: false,
+                },
+                {
+                    id: 3,
+                    text: "Do homework",
+                    done: false,
+                },
+
+            ]
+
         }
 
     },
@@ -12,4 +32,7 @@ Vue.createApp({
 
     }
 
-}).mount("#app"); 
+}).mount("#app");
+
+console.log(this.todoData)
+
