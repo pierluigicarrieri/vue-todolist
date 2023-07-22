@@ -24,11 +24,13 @@ Vue.createApp({
 
             ],
 
-            newTodoitem : {
+            newTodoitem: {
                 id: null,
                 text: "",
                 done: false,
             },
+
+            lastId: 3,
             
 
         }
@@ -49,7 +51,11 @@ Vue.createApp({
 
         addTodoItem() {
 
-            const itemClone = {...this.newTodoitem};
+            const itemClone = {...this.newTodoitem,
+            id: ++this.lastId,
+            };
+
+            console.log(itemClone)
 
             this.todoData.push(itemClone);
 
