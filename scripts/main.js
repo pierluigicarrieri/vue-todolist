@@ -39,15 +39,15 @@ Vue.createApp({
 
     methods: {
 
-        lineThrough(done) {
+        // lineThrough(done) {
 
-            if (done === false) {
-                done = true;
-            } else {
-                done = false;
-            }
+        //     if (done === false) {
+        //         this.done = true;
+        //     } else {
+        //         this.done = false;
+        //     }
 
-        },
+        // },
 
         addTodoItem() {
 
