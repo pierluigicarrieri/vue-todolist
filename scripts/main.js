@@ -22,7 +22,13 @@ Vue.createApp({
                     done: false,
                 },
 
-            ]
+            ],
+
+            newTodoitem : {
+                id: null,
+                text: "",
+                done: false,
+            },
             
 
         }
@@ -30,6 +36,24 @@ Vue.createApp({
     },
 
     methods: {
+
+        lineThrough(done) {
+
+            if (done === false) {
+                done = true;
+            } else {
+                done = false;
+            }
+
+        },
+
+        addTodoItem() {
+
+            const itemClone = {...this.newTodoitem};
+
+            this.todoData.push(itemClone);
+
+        },
 
     },
 

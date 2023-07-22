@@ -23,19 +23,20 @@
 
                         <div class="input-group mb-3">
 
-                            <button class="btn btn-outline-primary" type="button" id="button-addon1">Add</button>
+                            <button @click="addTodoItem" class="btn btn-outline-primary" type="button" id="button-addon1">Add</button>
 
-                            <input type="text" class="form-control" placeholder="Add new ToDo" aria-label="Add new ToDo" aria-describedby="Add new ToDo">
+                            <input type="text" class="form-control" placeholder="Add new ToDo" 
+                            aria-label="Add new ToDo" aria-describedby="Add new ToDo" v-model="newTodoitem.text">
                         
                         </div>
 
                     <div class="card">
 
-                        <ul class="list-group list-group-flush" v-for="todoDataObject in todoData">
+                        <ul class="list-group list-group-flush" v-for="todoDataItem in todoData">
 
                             <li class="list-group-item d-flex align-items-center">
 
-                                <span class="flex-grow-1" v-bind:class="(todoDataObject.done === true) ? 'text-decoration-line-through' : '' ">{{todoDataObject.text}}</span>
+                                <span class="flex-grow-1" @click="lineThrough(todoDataItem.done)" v-bind:class="(todoDataItem.done === true) ? 'text-decoration-line-through' : '' ">{{todoDataItem.text}}</span>
 
                                 <span class="cross px-2 text-light btn btn-sm btn-success rounded-circle"><i class="fa-solid fa-xmark"></i></span>
 
