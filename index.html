@@ -39,7 +39,7 @@
                                 <span class="flex-grow-1" @click="lineThrough(todoDataItem.done)" 
                                 v-bind:class="(todoDataItem.done === true) ? 'text-decoration-line-through' : '' ">{{todoDataItem.text}}</span>
 
-                                <span class="cross px-2 text-light btn btn-sm btn-success rounded-circle"><i class="fa-solid fa-xmark"></i></span>
+                                <span @click="deleteTodoItem(todoDataItem.id)" class="cross px-2 text-light btn btn-sm btn-success rounded-circle"><i class="fa-solid fa-xmark"></i></span>
 
                             </li>
 

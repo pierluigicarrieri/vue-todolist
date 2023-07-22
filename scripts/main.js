@@ -61,6 +61,14 @@ Vue.createApp({
 
         },
 
+        deleteTodoItem(id) {
+
+            const indexToDelete = this.todoData.findIndex((todoItem) => todoItem.id === id);
+
+            this.todoData.splice(indexToDelete, 1);
+
+        },
+
     },
 
 }).mount("#app");
